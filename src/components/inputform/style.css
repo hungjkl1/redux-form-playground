@@ -1,0 +1,40 @@
+
+.segment-control{
+    display: table;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+
+}
+.segment-items {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.segment-input{
+    position: absolute;
+    visibility: hidden;
+}
+.segment-label{
+    display: block;
+    border: 1px solid #ddd;
+
+    padding: 5px;
+    margin: 0 -1px -1px 0;
+    cursor: pointer;
+}
+
+.segment-label:nth-last-child(2){
+    border-right: none;
+}
+.segment-label:hover{
+    background: #fafafa;
+}
+.segment-input:checked + .segment-label
+{
+    background: black;
+    color: white;
+}

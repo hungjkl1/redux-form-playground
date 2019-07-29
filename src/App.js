@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import ReactDOM from "react-dom";
+import MyForm from './components/MyForm';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import SegmentButton from './components/inputform/segmentButton';
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const popResult= async values =>{
+  await sleep(500);
+  console.log(JSON.stringify(values))
+}
+const arrayTest=[{name:'Number 1',id:1},{name:'Number 2',id:2},{name:'Number 3',id:3}]
+class App extends React.Component{
+  render(){
+    return(
+<div className="App">
+    <MyForm onSubmit={popResult}/>
+    <SegmentButton arrayTest={arrayTest}/>
     </div>
-  );
+    )
+  }
 }
 
 export default App;
