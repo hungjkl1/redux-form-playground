@@ -1,0 +1,12 @@
+.avatar{
+    border-radius: 50% !important;
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover;
+    cursor: pointer;
+  
+  }
+  .file-Input{
+  display: none;
+  
+  }
